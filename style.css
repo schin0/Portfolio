@@ -1,0 +1,26 @@
+:root {
+  --branco: #F5F7F6;
+  --amarelo: #FFC857;
+  --cinza: #474351;
+  --preto: #1C1C1C;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+html, body{
+  min-height: 400px;
+}
+
+/* Padrões: */
+.txtC {
+  text-align: center;
+}
+
+.pt10 {
+  padding-top: 10px;
+}
