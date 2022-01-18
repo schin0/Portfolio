@@ -1,0 +1,132 @@
+/* Aplicação */
+
+body {
+  background-color: var(--preto);
+}
+
+#secTopicos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flip-container {
+  width: 200px;
+  height: 200px;
+  perspective: 1000px;
+}
+
+.flipper {
+  position: relative;
+	width: 100%;
+	height: 100%;
+  transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+
+.flip-container:hover .flipper{
+	transform: rotateY(180deg);
+}
+
+.front, .back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.back{
+  transform: rotateY(180deg);
+}
+
+.box {
+  position: relative;
+  height: 200px;
+  width: 180px;
+  display: block;
+  background-color: #000;
+  /* background:   linear-gradient(0deg, black, #444444); */
+  color: white;
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
+
+.glowing::before {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(45deg, 
+  #000, #000, var(--preto),  
+  #000, #000);
+  background-size: 400%;
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  z-index: -1;
+  animation: glower 20s linear infinite;
+  border-radius: 10px;
+}
+
+.glowing2::before {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(45deg, 
+  var(--amarelo), var(--branco), var(--amarelo), 
+  var(--branco), var(--amarelo));
+  background-size: 400%;
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  z-index: -1;
+  animation: glower2 20s linear infinite;
+  border-radius: 10px;
+}
+
+@keyframes glower {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes glower2 {
+  0% {
+    background-position: 0 0;
+  }
+  
+  25% {
+    background-position: 400% 0;
+  }
+
+  50% {
+    background-position: 0 0;
+  }
+
+  75% {
+    background-position: -400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* Estilo padrão do botão: */
+button {
+  width: 100px;
+  height: 30px;
+  font-size: 1.1em;
+  cursor: pointer;
+  background-color: #1717178c;
+  color: white;
+  border: none;
+  transition: all .4s;
+  filter: drop-shadow(#ffc7578c 2px 2px 2px);
+}
