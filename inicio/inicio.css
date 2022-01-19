@@ -1,7 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+
 /* Aplicação */
 
 body {
   background-color: var(--preto);
+}
+
+#imgTelaCheia {
+  height: 101vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#imgTelaCheia #title {
+  color: var(--branco);
+  font-weight: 5000;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#imgTelaCheia #title h1 {
+  font-family: 'Play', sans-serif;
+  font-size: 3rem;
+}
+
+#imgTelaCheia #title h1:nth-child(2) {
+  margin: 5vh 0;
 }
 
 #secTopicos {
@@ -118,7 +144,6 @@ body {
   }
 }
 
-/* Estilo padrão do botão: */
 button {
   width: 100px;
   height: 30px;
@@ -129,4 +154,70 @@ button {
   border: none;
   transition: all .4s;
   filter: drop-shadow(#ffc7578c 2px 2px 2px);
+}
+
+footer {
+  margin-top: 5vh;
+  padding-top: 10vh;
+  background: linear-gradient(0deg, #000, var(--preto));
+}
+
+#footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+#footer div:not(#links, #gabrielPerfil) {
+  margin: 0 3vw;
+}
+
+#footer #dev #gabrielPerfil {
+  margin-top: 3vh;
+  color: red;
+}
+
+#footer #dev #gabrielPerfil a {
+  text-decoration: none;
+}
+
+#footer h3 {
+  color: var(--branco);
+}
+
+#footer a {
+  width: 100%; 
+  position: relative;
+  color: var(--branco);
+  text-shadow: 1px 1px 1px #000;
+}
+
+#footer a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: var(--amarelo);
+}
+
+#footer a:hover::after {
+  width: 100%;
+  transition: width 0.5s ease-in-out
+}
+
+#footer #contatos {
+  display: flex;
+  flex-direction: column;
+}
+
+#footer #contatos #links {
+  margin: 3vh 0;
+  display: inline-block;
+  flex-direction: column;
+}
+
+#footer #contatos #links a {
+  text-decoration: none;
+  margin: 2vh 0 !important;
 }
