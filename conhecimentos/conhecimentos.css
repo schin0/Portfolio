@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+
+/* Aplicação */
+
+body {
+  background-color: var(--preto);
+}
+
+#header {
+  display: flex;
+  justify-content: space-around;
+  padding: 5vh 0;
+}
+
+#header a {
+  color: var(--branco);
+  text-decoration: none;
+  transition: all 0.7s ease;
+}
+
+#header a:hover {
+  color: var(--amarelo);
+  transition: all 0.4s ease;
+}
+
+#header a:nth-child(3) {
+  color: var(--amarelo);
+}
