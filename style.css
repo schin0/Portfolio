@@ -24,3 +24,71 @@ html, body{
 .pt10 {
   padding-top: 10px;
 }
+
+/* Footer */
+
+footer {
+  margin-top: 5vh;
+  padding-top: 10vh;
+  background: linear-gradient(0deg, #000, var(--preto));
+}
+
+#footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+#footer div:not(#links, #gabrielPerfil) {
+  margin: 0 3vw;
+}
+
+#footer #dev #gabrielPerfil {
+  margin-top: 3vh;
+  color: red;
+}
+
+#footer #dev #gabrielPerfil a {
+  text-decoration: none;
+}
+
+#footer h3 {
+  color: var(--branco);
+}
+
+#footer a {
+  width: 100%; 
+  position: relative;
+  color: var(--branco);
+  text-shadow: 1px 1px 1px #000;
+}
+
+#footer a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: var(--amarelo);
+}
+
+#footer a:hover::after {
+  width: 100%;
+  transition: width 0.5s ease-in-out
+}
+
+#footer #contatos {
+  display: flex;
+  flex-direction: column;
+}
+
+#footer #contatos #links {
+  margin: 3vh 0;
+  display: inline-block;
+  flex-direction: column;
+}
+
+#footer #contatos #links a {
+  text-decoration: none;
+  margin: 2vh 0 !important;
+}
