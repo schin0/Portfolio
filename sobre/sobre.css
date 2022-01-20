@@ -6,38 +6,45 @@ body {
   background-color: var(--preto);
 }
 
-#imgTelaCheia {
-  height: 101vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#imgTelaCheia #title {
-  color: var(--branco);
-  font-weight: 5000;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-#imgTelaCheia #title h1 {
-  font-family: 'Play', sans-serif;
-  font-size: 3rem;
-}
-
-#imgTelaCheia #title h1:nth-child(2) {
-  margin: 5vh 0;
-}
-
-#secTopicos {
+#header {
   display: flex;
   justify-content: space-around;
+  padding: 5vh 0;
+}
+
+#header a {
+  color: var(--branco);
+  text-decoration: none;
+  transition: all 0.7s ease;
+}
+
+#header a:hover {
+  color: var(--amarelo);
+  transition: all 0.4s ease;
+}
+
+#header a:nth-child(2) {
+  color: var(--amarelo);
+}
+
+#sobre {
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
+}
+
+#imgPrincipal {
+  text-align: center;
+}
+
+#imgPrincipal img {
+  width: 500px;
+  border-radius: 50px;
 }
 
 .flip-container {
-  width: 200px;
-  height: 200px;
+  width: 500px;
+  height: 500px;
   perspective: 1000px;
 }
 
@@ -64,22 +71,15 @@ body {
   transform: rotateY(180deg);
 }
 
-.align {
-  display: flex !important;
-  align-items: flex-end !important;
-  justify-content: center;
-  padding-bottom: 3vh;
-}
-
 .box {
   position: relative;
-  height: 200px;
-  width: 180px;
+  height: 500px;
+  width: 500px;
   display: block;
   background-color: #000;
   /* background:   linear-gradient(0deg, black, #444444); */
   color: white;
-  border-radius: 10px;
+  border-radius: 50px;
   font-size: 1.1rem;
 }
 
@@ -151,19 +151,20 @@ body {
   }
 }
 
-.btn {
-  width: 100px;
-  height: 30px;
-  font-size: 1.1em;
-  cursor: pointer;
-  background-color: #1717178c;
-  color: white;
-  text-decoration: none;
+#sobreTxt {
   display: flex;
-  align-items: center;
   justify-content: center;
-  border: none;
-  transition: all .4s;
-  filter: drop-shadow(#ffc7578c 2px 2px 2px);
+  text-align: justify;
+  flex-direction: column;
+  padding: 10px 40px;
+}
+
+#sobreTxt a {
+  text-decoration: none;
+  color: var(--amarelo);
   cursor: pointer;
+}
+
+.destaque {
+  color: var(--amarelo);
 }
